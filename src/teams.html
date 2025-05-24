@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipes | Puro Brilho</title>
+    <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/teams.js" defer></script>
+</head>
+<body class="h-screen flex flex-col justify-center items-center gap-y-20">
+    <h1 class="text-4xl font-semibold text-center">Escolha entre suas equipes!</h1>
+    <div class="flex gap-x-20">
+        
+            <div id="senac" class="border-[#D9D9D9] p-16 px-20 border-2 rounded-lg flex flex-col gap-8 items-center justify-center shadow-xl hover:border-[#2AA093]">
+                <img class="w-40" src="/public/imagens/senac.png" alt="">
+                <h2 class="text-xl font-medium">Equipe Senac</h2>
+            </div>
+        
+        
+            <div id="prefeitura" class="border-[#D9D9D9] p-16 px-20 border-2 rounded-lg flex flex-col gap-8 items-center justify-center shadow-xl hover:border-[#2AA093]">
+                <img class="w-40" src="/public/imagens/prefeitura.png" alt="">
+                <h2 class="text-xl font-medium">Equipe Prefeitura</h2>
+            </div>
+        
+    </div>
+    <div class="flex items-center gap-x-4">
+        <img id="user-foto" class="rounded-full border-[#BFBFBF] border w-14" src="" alt="">
+        <p id="user-name" class="font-semibold text-xl"></p>
+    </div>
+    <a class="absolute left-12 top-12" href="/src/login.html">
+        <img class="w-8" src="../public/imagens/icons/back.png" alt="">
+    </a>
+    
+</body>
+</html>

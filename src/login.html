@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Puro Brilho</title>
+    <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/login.js" defer></script>
+</head>
+<body class="h-screen flex">
+    <div class="flex justify-center items-center flex-col gap-y-16 w-1/2 bg-[#D9D9D9] h-screen">
+        <div class="flex flex-col gap-y-4 items-center ">
+            <h1 class="font-semibold text-4xl">Boas-vindas ao Puro Brilho</h1>
+            <p class="text-[#717171] text-lg">Comece agora. Não é nescessário cartão de crédito</p>
+        </div>
+        <div class="w-1/2 flex flex-col gap-y-8">
+
+            <div class="flex flex-col w-full gap-y-2">
+                <label class="text-[#717171]" for="">User:</label>
+                <input id="user" type="text" class="w-full border-[#717171] border bg-transparent rounded-lg p-4">
+            </div>
+
+            <div class="flex flex-col w-full gap-y-2">
+                <label class="text-[#717171]" for="">Senha:</label>
+                <input id="senha" type="password" class="w-full border-[#717171] border bg-transparent rounded-lg p-4">
+                <div class="flex items-center gap-x-2">
+                    <input class="size-4" type="checkbox" name="checkbox" id="checkbox">
+                    <p class="text-[#717171]">Mantenha-se logado</p>
+                </div>
+            </div>
+            
+            
+
+        </div>
+
+
+            <button id="btn-entrar" class="w-1/2 bg-[#2AA093] text-white rounded-lg p-4 flex items-center text-center justify-center">Entrar</button>
+    
+     
+        
+    </div>
+    <div class="w-1/2 h-screen bg-[#70BDB6] flex items-center relative">
+        <img class="w-52 absolute top-8 transform -translate-x-1/2 left-1/2" src="/public/imagens/LogoBranca.png" alt="logo branca">
+        <img class="w-full mt-8" src="/public/imagens/loginvetor.png" alt="">
+    </div>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Avisos | Puro Brilho</title>
     <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/user.js" defer></script>
+    <script src="/js/avisos.js" defer></script>
     <script>
         tailwind.config = {
             darkMode: 'class'
@@ -45,13 +45,13 @@
                 </a>
                 <a href="/src/sistema/configuracoes.html">
                     <div class="flex items-center gap-x-4">
-                        <img class="w-6" src="/public/imagens/icons/configuracoes.png" alt="">
+                        <img class="w-6" src="/public/imagens/icons/configuracoes.png" alt="icone configuracoes">
                         <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Configurações</h1>
                     </div>
                 </a>
             </div>
             <div class="flex items-center gap-x-4 absolute bottom-6">
-                <img id="menu-foto" class="rounded-full border-[#BFBFBF] border w-10" src="" alt="">
+                <img id="menu-foto" class="rounded-full border-[#BFBFBF] border w-10" src="" alt="foto perfil">
                 <p id="menu-name" class="font-semibold"></p>
             </div>
         </nav>
@@ -61,7 +61,7 @@
         <div class="w-full flex gap-x-20">
             <div class="w-4/5 bg-[#70BDB6] text-white text-center rounded-xl relative p-4">
                 <img class="absolute transform -translate-y-1/2 top-1/2 left-8 w-7" src="/public/imagens/icons-white/sino.png" alt="">
-                <p class="text-lg font-medium">Foram adicionadas novas 4 tarefas</p>
+                <p class="text-lg font-medium">Entraram novos 2 funcionários nesse final de semana</p>
             </div>
         </div>
         <div class="w-4/5 flex flex-col gap-6">
@@ -69,17 +69,17 @@
 
             <div class="grid grid-cols-3 gap-20">
                 <div class="bg-[#2AA093] p-12 text-white rounded-xl flex gap-y-5 flex-col items-center justify-center text-center">
-                    <h1 class="text-6xl font-semibold">3</h1>
+                    <h1 id="total-projetos-01" class="text-6xl font-semibold">3</h1>
                     <p class="w-full font-medium">Total de Projetos</p>
                 </div>
 
                 <div class="bg-[#2AA093] p-12 text-white rounded-xl flex gap-y-5 flex-col items-center justify-center text-center">
-                    <h1 class="text-6xl font-semibold">20</h1>
+                    <h1 id="total-tarefas-01" class="text-6xl font-semibold">20</h1>
                     <p class="w-full font-medium">Total de Tarefas</p>
                 </div>
 
                 <div class="bg-[#2AA093] p-12 text-white rounded-xl flex gap-y-5 flex-col items-center justify-center text-center">
-                    <h1 class="text-6xl font-semibold">Gerente</h1>
+                    <h1 id="total-cargo-01" class="text-6xl font-semibold">Gerente</h1>
                     <p class="w-full font-medium">Cargo</p>
                 </div>
             </div>

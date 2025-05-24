@@ -5,6 +5,7 @@ const btnEntrar = document.querySelector("#btn-entrar");
 const passUser = "Arthur Juwer";
 const passSenha = "102030";
 
+
 if(localStorage.getItem('usuario')){
     localStorage.removeItem('usuario');
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projetos | Puro Brilho</title>
-    <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/user.js" defer></script>
+    <script src="/js/projetos.js" defer></script>
     <script>
         tailwind.config = {
             darkMode: 'class'
@@ -17,179 +17,162 @@
 
     <div class="w-80">
         <nav class="fixed flex flex-col gap-y-4 p-8 border-r border-[#D9D9D9] dark:border-gray-700 h-screen">
-            <img class="w-40 mt-2" src="/public/imagens/LogoTexto.png" alt="logo texto">
+            <img class="w-40 mt-2" src="/public/imagens/LogoTexto.png" alt="logo texto" />
             <div class="mt-10 flex flex-col gap-y-8">
+                <!-- links do menu mantidos -->
                 <a href="/src/sistema/avisos.html">
                     <div class="flex items-center gap-x-4">
-                        <img class="w-6" src="/public/imagens/icons/avisos.png" alt="">
+                        <img class="w-6" src="/public/imagens/icons/avisos.png" alt="" />
                         <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Avisos</h1>
                     </div>
                 </a>
                 <a href="/src/sistema/projetos.html">
                     <div class="flex items-center gap-x-4">
-                        <img class="w-6" src="/public/imagens/icons/tarefas.png" alt="">
+                        <img class="w-6" src="/public/imagens/icons/tarefas.png" alt="" />
                         <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Tarefas</h1>
                     </div>
                 </a>
                 <a href="/src/sistema/equipe.html">
                     <div class="flex items-center gap-x-4">
-                        <img class="w-6" src="/public/imagens/icons/equipe.png" alt="">
+                        <img class="w-6" src="/public/imagens/icons/equipe.png" alt="" />
                         <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Equipe</h1>
                     </div>
                 </a>
                 <a href="/src/sistema/trocareq.html">
                     <div class="flex items-center gap-x-4">
-                        <img class="w-6" src="/public/imagens/icons/trocareq.png" alt="">
+                        <img class="w-6" src="/public/imagens/icons/trocareq.png" alt="" />
                         <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Trocar Equipe</h1>
                     </div>
                 </a>
                 <a href="/src/sistema/configuracoes.html">
                     <div class="flex items-center gap-x-4">
-                        <img class="w-6" src="/public/imagens/icons/configuracoes.png" alt="">
+                        <img class="w-6" src="/public/imagens/icons/configuracoes.png" alt="" />
                         <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Configurações</h1>
                     </div>
                 </a>
             </div>
             <div class="flex items-center gap-x-4 absolute bottom-6">
-                <img id="menu-foto" class="rounded-full border-[#BFBFBF] border w-10" src="" alt="">
+                <img id="menu-foto" class="rounded-full border-[#BFBFBF] border w-10" src="" alt="Foto usuário" />
                 <p id="menu-name" class="font-semibold"></p>
             </div>
         </nav>
     </div>
+
     <div class="w-full flex flex-col gap-y-10 m-14">
         <h1 class="text-4xl font-semibold">Projetos</h1>
         <div class="flex gap-12">
             <div class="w-4/5 grid grid-cols-3 gap-8">
-                <button class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
-                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2" src="/public/imagens/icons-white/plus.png" alt="">
+                <button id="btn-adicionar" class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
+                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2 left-4" src="/public/imagens/icons-white/plus.png" alt="" />
                     Adicionar Projeto
                 </button>
-                
-                <button class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
-                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2" src="/public/imagens/icons-white/edit.png" alt="">
+                <button id="btn-editar" class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
+                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2 left-4" src="/public/imagens/icons-white/edit.png" alt="" />
                     Editar Projeto
                 </button>
-                
-                <button class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
-                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2" src="/public/imagens/icons-white/filtro.png" alt="">
+                <button id="btn-filtrar" class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
+                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2 left-4" src="/public/imagens/icons-white/filtro.png" alt="" />
                     Filtrar Projeto
                 </button>
             </div>
         </div>
-        <div class="w-4/5 flex flex-col gap-6">
-            <div class="w-full flex justify-between">
-                <h2 class="text-[#2C2C2C] text-lg font-semibold dark:text-white">Em andamento:</h2>
-                <span class="bg-[#2AA093] size-8 flex items-center justify-center text-white rounded-full font-semibold">2</span>
-            </div>
-            <div class="grid grid-cols-3 gap-5">
-                <a href="/src/sistema/tarefas.html">
-                    <div class="flex flex-col gap-4 border-2 border-[#D9D9D9] rounded-lg p-4">
-                        
-                            <div class="flex items-center gap-4 relative">
-                                <span class="size-2 block rounded-full bg-[#2AA093]"></span>
-                                <h2 class="font-medium text-lg">Estacionamento</h2>
-                                <img class="absolute -right-2 size-6" src="/public/imagens/icons/trash.png" alt="">
-                            </div>
-                        
-                        <div class="flex flex-col gap-y-2">
-                            <div class="flex justify-between">
-                                <p class="text-sm">Tarefas: </p>
-                                <p class="text-sm font-semibold">5</p>
-                            </div>
 
-                            <div class="flex justify-between">
-                                <p class="text-sm">Funcionários: </p>
-                                <p class="text-sm font-semibold">2</p>
-                            </div>
-
-                            <div class="flex justify-between">
-                                <p class="text-sm">Data final: </p>
-                                <p class="text-sm font-semibold">29/05</p>
-                            </div>
-
-                            <div class="flex justify-between">
-                                <p class="text-sm">Dificuldade: </p>
-                                <p class="text-sm font-semibold">Médio</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="flex flex-col gap-4 border-2 border-[#D9D9D9] rounded-lg p-4">
-                    <div class="flex items-center gap-4 relative">
-                        <span class="size-2 block rounded-full bg-[#D47B23]"></span>
-                        <h2 class="font-medium text-lg">Salas de Aula</h2>
-                        <img class="absolute -right-2 size-6" src="/public/imagens/icons/trash.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-y-2">
-                        <div class="flex justify-between">
-                            <p class="text-sm">Tarefas: </p>
-                            <p class="text-sm font-semibold">5</p>
-                        </div>
-
-                        <div class="flex justify-between">
-                            <p class="text-sm">Funcionários: </p>
-                            <p class="text-sm font-semibold">2</p>
-                        </div>
-
-                        <div class="flex justify-between">
-                            <p class="text-sm">Data final: </p>
-                            <p class="text-sm font-semibold">29/05</p>
-                        </div>
-
-                        <div class="flex justify-between">
-                            <p class="text-sm">Dificuldade: </p>
-                            <p class="text-sm font-semibold">Médio</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full flex justify-between">
-                <h2 class="text-[#2C2C2C] text-lg font-semibold dark:text-white">Não Iniciada:</h2>
-                <span class="bg-[#2AA093] size-8 flex items-center justify-center text-white rounded-full font-semibold">0</span>
-            </div>
-
-
-            <div class="w-full flex justify-between">
-                <h2 class="text-[#2C2C2C] text-lg font-semibold dark:text-white">Concluídas:</h2>
-                <span class="bg-[#2AA093] size-8 flex items-center justify-center text-white rounded-full font-semibold">1</span>
-            </div>
-            <div class="grid grid-cols-3 gap-5">
-                <div class="flex flex-col gap-4 border-2 border-[#D9D9D9] rounded-lg p-4">
-                    <div class="flex items-center gap-4 relative">
-                        <span class="size-2 block rounded-full bg-[#A02A6B]"></span>
-                        <h2 class="font-medium text-lg">Pátio</h2>
-                        <img class="absolute -right-2 size-6" src="/public/imagens/icons/trash.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-y-2">
-                        <div class="flex justify-between">
-                            <p class="text-sm">Tarefas: </p>
-                            <p class="text-sm font-semibold">5</p>
-                        </div>
-
-                        <div class="flex justify-between">
-                            <p class="text-sm">Funcionários: </p>
-                            <p class="text-sm font-semibold">2</p>
-                        </div>
-
-                        <div class="flex justify-between">
-                            <p class="text-sm">Data final: </p>
-                            <p class="text-sm font-semibold">29/05</p>
-                        </div>
-
-                        <div class="flex justify-between">
-                            <p class="text-sm">Dificuldade: </p>
-                            <p class="text-sm font-semibold">Médio</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
+        <!-- Container para os cards dinâmicos via JS -->
+        <div class="projetos-container w-4/5 grid grid-cols-3 gap-10">
+            <!-- Projetos serão inseridos via JS -->
         </div>
-
     </div>
+
+    <!-- Modal Adicionar Projeto -->
+    <div id="modal-adicionar" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"> 
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-96 relative">
+          <button id="close-adicionar" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xl font-bold">&times;</button>
+          <h2 class="text-2xl font-semibold mb-4 dark:text-white">Adicionar Projeto</h2>
+          <form id="form-adicionar" class="flex flex-col gap-4">
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Nome do projeto:
+              <input id="input-nome" type="text" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white" />
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Funcionários:
+              <input id="input-funcionarios" type="number" min="1" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white" />
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Data Final:
+              <input id="input-datafinal" type="date" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white" />
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Dificuldade:
+              <select id="select-dificuldade" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white">
+                <option value="" disabled selected>Selecione</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Média">Média</option>
+                <option value="Difícil">Difícil</option>
+              </select>
+            </label>
+            <button type="submit" class="bg-[#70BDB6] text-white py-2 rounded hover:bg-[#5a9e96] transition">Adicionar</button>
+          </form>
+        </div>
+      </div>
     
+
+    <!-- Modal Editar Projeto -->
+    <div id="modal-editar" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"> 
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-96 relative">
+          <button id="close-editar" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xl font-bold">&times;</button>
+          <h2 class="text-2xl font-semibold mb-4 dark:text-white">Editar Projeto</h2>
+          <form id="form-editar" class="flex flex-col gap-4">
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Selecione o projeto:
+              <select required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white"></select>
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Nome do projeto:
+              <input id="editar-nome" type="text" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white" />
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Funcionários:
+              <input id="editar-funcionarios" type="number" min="1" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white" />
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Data Final:
+              <input id="editar-datafinal" type="date" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white" />
+            </label>
+            <label class="flex flex-col text-gray-700 dark:text-gray-300">
+              Dificuldade:
+              <select id="editar-dificuldade" required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white">
+                <option value="" disabled>Selecione</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Média">Média</option>
+                <option value="Difícil">Difícil</option>
+              </select>
+            </label>
+            <button type="submit" class="bg-[#70BDB6] text-white rounded py-2 mt-4 transition-colors">Salvar Alterações</button>
+          </form>
+        </div>
+      </div>
+      
+      
+
+    <!-- Modal Filtrar Projeto -->
+    <div id="modal-filtrar" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-80 relative">
+            <button id="close-filtrar" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xl font-bold">&times;</button>
+            <h2 class="text-2xl font-semibold mb-4 dark:text-white">Filtrar Projetos</h2>
+            <form id="form-filtrar" class="flex flex-col gap-4">
+                <label class="flex flex-col text-gray-700 dark:text-gray-300">
+                    Filtro Dificuldade:
+                    <select required class="mt-1 p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white">
+                        <option value="todos">Todos</option>
+                        <option value="Fácil">Fácil</option>
+                        <option value="Média">Média</option>
+                        <option value="Difícil">Difícil</option>
+                    </select>
+                </label>
+                <button type="submit" class="bg-[#70BDB6] text-white py-2 rounded hover:bg-[#5a9e96] transition">Aplicar Filtro</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

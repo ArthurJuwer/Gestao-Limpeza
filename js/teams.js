@@ -14,52 +14,38 @@ document.addEventListener("DOMContentLoaded", function () {
           {
             nome: "Equipe Senac",
             foto: "https://example.com/equipe_alpha.jpg",
-            numprojetos: {
-              num: 3,
-              funcionarios: 10,
-              dataFinal: "2025-12-31",
-              dificuldade: "Alta"
-            },
-            tarefas: [
+            numprojetos: [
               {
-                nome: "Projeto Site",
-                dataFinal: "2025-06-30",
+                id: 0,
+                nome: "Estacionamento",
                 tarefas: [
-                  { id: 1, texto: "Criar layout" },
-                  { id: 2, texto: "Programar backend" },
-                  { id: 3, texto: "Testar funcionalidades" }
-                ]
+                  { id: 1, texto: "Atualizar sistema" },
+                  { id: 2, texto: "Revisar segurança" }
+                ],
+                funcionarios: 5,
+                dataFinal: "2025-05-29",
+                dificuldade: "Média"
               },
-              {
-                nome: "Aplicativo Mobile",
-                dataFinal: "2025-08-15",
-                tarefas: [
-                  { id: 1, texto: "Desenhar interface" },
-                  { id: 2, texto: "Integrar API" }
-                ]
-              }
-            ],
+          ],
             cargo: "Gerente de Limpeza"
           },
           {
             nome: "Equipe Prefeitura",
             foto: "https://example.com/equipe_beta.jpg",
-            numprojetos: {
-              num: 1,
-              funcionarios: 5,
-              dataFinal: "2025-09-10",
-              dificuldade: "Média"
-            },
-            tarefas: [
+            numprojetos: [
               {
-                nome: "Manutenção Servidor",
-                dataFinal: "2025-07-20",
+                id: 0,
+                nome: "Salas de Aula",
                 tarefas: [
                   { id: 1, texto: "Atualizar sistema" },
                   { id: 2, texto: "Revisar segurança" }
-                ]
-              }
-            ],
+                ],
+                funcionarios: 5,
+                dataFinal: "29/05",
+                dificuldade: "Média"
+              },
+          ],
+            
             cargo: "Faxineiro"
           }
         ]

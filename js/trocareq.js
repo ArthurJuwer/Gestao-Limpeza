@@ -53,3 +53,7 @@ if (equipeAtual) {
         borderP.style.border = "2px solid #D9D9D9";
     }
 }
+
+if(dadosUsuario.corsistema === "escuro"){
+  document.documentElement.classList.add('dark');
+} 

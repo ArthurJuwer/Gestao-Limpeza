@@ -13,3 +13,7 @@ const menuFoto = document.querySelector("#menu-foto");
   if (menuFoto) {
     menuFoto.src = dadosUsuario.foto;
   }
+
+  if(dadosUsuario.corsistema === "escuro"){
+    document.documentElement.classList.add('dark');
+} 

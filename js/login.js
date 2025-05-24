@@ -2,7 +2,7 @@ const inputUser = document.querySelector("#user");
 const inputSenha = document.querySelector("#senha");
 const btnEntrar = document.querySelector("#btn-entrar");
 
-const passUser = "arthurjuwer@gmail.com";
+const passUser = "Arthur Juwer";
 const passSenha = "102030";
 
 if(localStorage.getItem('usuario')){

@@ -6,120 +6,121 @@
     <title>Configurações | Puro Brilho</title>
     <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <script src="/js/configuracoes.js" defer></script>
     <script src="/js/user.js" defer></script>
-    
 </head>
-<body class="flex">
+<body class="flex dark:bg-[#333] dark:text-white">
 
     <div class="w-80">
-        <nav class="fixed flex flex-col gap-y-4 p-8 border-r border-[#D9D9D9] h-screen">
+        <nav class="fixed flex flex-col gap-y-4 p-8 border-r border-[#D9D9D9] dark:border-gray-700 h-screen">
             <img class="w-40 mt-2" src="/public/imagens/LogoTexto.png" alt="logo texto">
             <div class="mt-10 flex flex-col gap-y-8">
                 <a href="/src/sistema/avisos.html">
                     <div class="flex items-center gap-x-4">
                         <img class="w-6" src="/public/imagens/icons/avisos.png" alt="">
-                        <h1 class="text-[#2C2C2C] font-semibold">Avisos</h1>
+                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Avisos</h1>
                     </div>
                 </a>
-
                 <a href="/src/sistema/projetos.html">
-                    <div class=" flex items-center gap-x-4">
+                    <div class="flex items-center gap-x-4">
                         <img class="w-6" src="/public/imagens/icons/tarefas.png" alt="">
-                        <h1 class="text-[#2C2C2C] font-semibold">Tarefas</h1>
+                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Tarefas</h1>
                     </div>
                 </a>
-
                 <a href="/src/sistema/equipe.html">
-                    <div class=" flex items-center gap-x-4">
+                    <div class="flex items-center gap-x-4">
                         <img class="w-6" src="/public/imagens/icons/equipe.png" alt="">
-                        <h1 class="text-[#2C2C2C] font-semibold">Equipe</h1>
+                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Equipe</h1>
                     </div>
                 </a>
-
                 <a href="/src/sistema/trocareq.html">
-                    <div class=" flex items-center gap-x-4">
+                    <div class="flex items-center gap-x-4">
                         <img class="w-6" src="/public/imagens/icons/trocareq.png" alt="">
-                        <h1 class="text-[#2C2C2C] font-semibold">Trocar Equipe</h1>
+                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Trocar Equipe</h1>
                     </div>
                 </a>
-
                 <a href="/src/sistema/configuracoes.html">
-                    <div class=" flex items-center gap-x-4">
+                    <div class="flex items-center gap-x-4">
                         <img class="w-6" src="/public/imagens/icons/configuracoes.png" alt="">
-                        <h1 class="text-[#2C2C2C] font-semibold">Configurações</h1>
+                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Configurações</h1>
                     </div>
                 </a>
             </div>
-
             <div class="flex items-center gap-x-4 absolute bottom-6">
                 <img id="menu-foto" class="rounded-full border-[#BFBFBF] border w-10" src="" alt="">
                 <p id="menu-name" class="font-semibold"></p>
             </div>
-            
         </nav>
     </div>
+
     <div class="w-full flex flex-col gap-y-10 m-14">
         <h1 class="text-4xl font-semibold">Configurações</h1>
-        <div class="w-4/5 rounded-lg bg-[#E6E6E6] p-5 flex items-center justify-between">
+        <div class="w-4/5 rounded-lg bg-[#E6E6E6] dark:bg-gray-700 p-5 flex items-center justify-between">
             <div class="flex gap-8 items-center">
                 <img id="user-foto" class="w-20 border border-[#BFBFBF] rounded-full" src="" alt="">
                 <div class="flex flex-col">
-                    <p id="user-name" class="text-[#2C2C2C] font-semibold"></p>
+                    <p id="user-name" class="text-[#2C2C2C] dark:text-white font-semibold"></p>
                     <span class="text-[#70BDB6]">Pertence à 2 equipes</span>
                 </div>
             </div>
-            <button class="bg-[#70BDB6] px-12 p-3 rounded-full text-white">Alterar foto</button>
+            <button id="alterar-foto" class="bg-[#70BDB6] px-12 p-3 rounded-full text-white">Alterar foto</button>
         </div>
 
         <div class="flex flex-col gap-6">
-        <h2 class="text-[#2C2C2C] font-semibold">Perfil:</h2>
-        <div class="flex flex-col gap-y-6">
-            <div class="w-4/5">
-                <div class="relative w-full">
-                    <label class="absolute bg-white -top-3 left-3 px-2 text-sm text-[#2AA093]">Nome</label>
-                    <input id="input-nome" class="border-[#8ACDC9] border-2 w-full rounded-xl p-4" type="text">
-                    <button id="button-nome" class="absolute transform -translate-y-1/2 top-1/2 right-6 bg-[#70BDB6] px-8 p-2 rounded-full text-white">Alterar</button>
+            <h2 class="text-[#2C2C2C] dark:text-white font-semibold">Perfil:</h2>
+            <div class="flex flex-col gap-y-6">
+                <div class="w-4/5">
+                    <div class="relative w-full">
+                        <label class="absolute bg-white dark:bg-[#333] -top-3 left-3 px-2 text-sm text-[#2AA093]">Nome</label>
+                        <input id="input-nome" class="border-[#8ACDC9] dark:bg-[#333] border-2 w-full rounded-xl p-4" type="text">
+                        <button id="button-nome" class="absolute transform -translate-y-1/2 top-1/2 right-6 bg-[#70BDB6] px-8 p-2 rounded-full text-white">Alterar</button>
+                    </div>
                 </div>
-                
-            </div>
-            <div class="w-4/5">
-                <div class="relative w-full">
-                    <label class="absolute bg-white -top-3 left-3 px-2 text-sm text-[#2AA093]">Senha</label>
-                    <input id="input-senha" class="border-[#8ACDC9] border-2 w-full rounded-xl p-4" type="password">
-                    <button id="button-senha" class="absolute transform -translate-y-1/2 top-1/2 right-6 bg-[#70BDB6] px-8 p-2 rounded-full text-white">Alterar</button>
+                <div class="w-4/5">
+                    <div class="relative w-full">
+                        <label class="absolute bg-white dark:bg-[#333] -top-3 left-3 px-2 text-sm text-[#2AA093]">Senha</label>
+                        <input id="input-senha" class="border-[#8ACDC9] dark:bg-[#333] border-2 w-full rounded-xl p-4" type="password">
+                        <button id="button-senha" class="absolute transform -translate-y-1/2 top-1/2 right-6 bg-[#70BDB6] px-8 p-2 rounded-full text-white">Alterar</button>
+                    </div>
                 </div>
-                
             </div>
         </div>
-        </div>
-        
+
         <div class="flex flex-col gap-6">
-            <h2 class="text-[#2C2C2C] font-semibold">Cor do sistema:</h2>
-            <div class="">
-                <button class="relative bg-[#2AA093] px-16 p-3 rounded-lg text-white font-semibold">
+            <h2 class="text-[#2C2C2C] dark:text-white font-semibold">Cor do sistema:</h2>
+            <div>
+                <button id="btn-claro" class="relative dark:bg-transparent dark:border-[#ccc] border border-[#2AA093] bg-[#2AA093] px-16 p-3 rounded-lg text-white font-semibold">
                     <img class="absolute left-4 size-6" src="/public/imagens/icons-white/sol.png" alt="sol">
                     Claro
                 </button>
-                <button class="relative border text-[#2C2C2C] border-[#2C2C2C] px-16 p-3 rounded-lg font-semibold">
-                    <img class="absolute left-4 size-6" src="/public/imagens/icons/lua.png" alt="sol">
+                <button id="btn-escuro" class="relative dark:bg-[#2AA093] dark:border-[#2AA093] border text-[#2C2C2C] dark:text-white border-[#2C2C2C] px-16 p-3 rounded-lg font-semibold">
+                    <!-- <img class="absolute left-4 size-6" src="/public/imagens/icons/lua.png" alt="lua"> -->
+                    <svg class="absolute left-4 size-6 text-[#2C2C2C] dark:text-white" 
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" 
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z" 
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                        
                     Escuro
                 </button>
-    
             </div>
         </div>
-        
+
         <div class="flex flex-col gap-6">
-            <h2 class="text-[#2C2C2C] font-semibold">Equipes:</h2>
+            <h2 class="text-[#2C2C2C] dark:text-white font-semibold">Equipes:</h2>
             <div class="flex gap-10">
                 <img class="w-28" src="/public/imagens/senac.png" alt="">
                 <img class="w-28" src="/public/imagens/prefeitura.png" alt="">
             </div>
         </div>
-
-        
     </div>
-    
-    
+
+    <div id="modal"></div>
 </body>
 </html>

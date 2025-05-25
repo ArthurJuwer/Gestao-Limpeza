@@ -6,7 +6,7 @@
     <title>Tarefas | Puro Brilho</title>
     <link rel="shortcut icon" href="/public/imagens/LogoSimbolo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/user.js" defer></script>
+    <script src="/js/tarefas.js" defer></script>
     <script>
         tailwind.config = {
             darkMode: 'class'
@@ -28,7 +28,7 @@
                 <a href="/src/sistema/projetos.html">
                     <div class="flex items-center gap-x-4">
                         <img class="w-6" src="/public/imagens/icons/tarefas.png" alt="">
-                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Tarefas</h1>
+                        <h1 class="text-[#2C2C2C] dark:text-white font-semibold">Projetos</h1>
                     </div>
                 </a>
                 <a href="/src/sistema/equipe.html">
@@ -77,10 +77,15 @@
             </div>
         </div>
         <div class="w-4/5">
-            <h1 class="bg-[#2AA093] text-white text-center text-2xl p-4 rounded-t-2xl relative">
-                Estacionamento
-                <span class="absolute right-5 text-sm transform -translate-y-1/2 top-1/2">29/05</span>
-            </h1>
+            <div class="relative">
+                <span id="projeto-voltar" class="absolute cursor-pointer left-5 text-sm transform -translate-y-1/2 top-1/2">Voltar</span>
+
+                <h1 id="projeto-name" class="bg-[#2AA093] text-white text-center text-2xl p-4 rounded-t-2xl "> 
+                </h1>
+                <span id="projeto-date" class="absolute right-5 text-sm transform -translate-y-1/2 top-1/2"></span>
+            </div>
+            
+
             <table class="w-full">
                 <tr class="grid grid-cols-5">
                     <th class="p-6 border-b border-black border-l">Iniciado</th>
@@ -90,11 +95,11 @@
                     <th class="p-6 border-b border-black border-r">Concluído</th>
                 </tr>
                 <tr class="grid grid-cols-5">
-                    <td class="border-b border-black border-l h-96 rounded-bl-2xl"></td>
-                    <td class="border-b border-black border border-t-0 h-96"></td>
-                    <td class="border-b border-black h-96"></td>
-                    <td class="border-b border-black border border-t-0 h-96"></td>
-                    <td class="border-b border-black border-r h-96 rounded-br-2xl"></td>
+                    <td id="step-1" class="border-b border-black border-l h-96 rounded-bl-2xl"></td>
+                    <td id="step-2" class="border-b border-black border border-t-0 h-96"></td>
+                    <td id="step-3" class="border-b border-black h-96"></td>
+                    <td id="step-4" class="border-b border-black border border-t-0 h-96"></td>
+                    <td id="step-5" class="border-b border-black border-r h-96 rounded-br-2xl"></td>
                 </tr>
             </table>
         </div>

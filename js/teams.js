@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
         equipes: [
           {
             nome: "Equipe Senac",
-            foto: "https://example.com/equipe_alpha.jpg",
             numprojetos: [
               {
                 id: 0,
                 nome: "Estacionamento",
                 tarefas: [
-                  { id: 1, texto: "Atualizar sistema" },
-                  { id: 2, texto: "Revisar segurança" }
+                  { id: 1, texto: "Atualizar sistema", step: 1 },
+                  { id: 2, texto: "Revisar segurança", step: 2 }
                 ],
                 funcionarios: 5,
                 dataFinal: "2025-05-29",
@@ -31,17 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           {
             nome: "Equipe Prefeitura",
-            foto: "https://example.com/equipe_beta.jpg",
             numprojetos: [
               {
                 id: 0,
                 nome: "Salas de Aula",
                 tarefas: [
-                  { id: 1, texto: "Atualizar sistema" },
-                  { id: 2, texto: "Revisar segurança" }
+                  { id: 1, texto: "Atualizar sistema", step: 1 },
+                  { id: 2, texto: "Revisar segurança", step: 2 }
                 ],
                 funcionarios: 5,
-                dataFinal: "29/05",
+                dataFinal: "2025-06-22",
                 dificuldade: "Média"
               },
           ],

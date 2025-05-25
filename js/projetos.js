@@ -27,29 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
         projetoCard.className = "flex flex-col gap-4 border-2 border-[#D9D9D9] rounded-lg p-4";
   
         projetoCard.innerHTML = `
-          <div class="flex items-center gap-4 relative">
-            <span class="size-2 block rounded-full bg-[#2AA093]"></span>
-            <h2 class="font-medium text-lg">${projeto.nome}</h2>
-            <img class="absolute -right-2 size-6 cursor-pointer" src="/public/imagens/icons/trash.png" alt="Remover projeto" data-id="${projeto.id || projeto.nome}">
-          </div>
-          <div class="flex flex-col gap-y-2">
-            <div class="flex justify-between">
-              <p class="text-sm">Tarefas: </p>
-              <p class="text-sm font-semibold">${projeto.tarefas ? projeto.tarefas.length : 0}</p>
+         <a href="tarefas.html?projeto=${encodeURIComponent(projeto.nome)}" class="">
+            <div class="flex items-center gap-4 relative">
+                <span class="size-2 block rounded-full bg-[#2AA093]"></span>
+                <h2 class="font-medium text-lg">${projeto.nome}</h2>
+                <img class="absolute -right-2 size-6 cursor-pointer" src="/public/imagens/icons/trash.png" alt="Remover projeto" data-id="${projeto.id || projeto.nome}">
             </div>
-            <div class="flex justify-between">
-              <p class="text-sm">Funcionários: </p>
-              <p class="text-sm font-semibold">${projeto.funcionarios || 0}</p>
+            <div class="flex flex-col gap-y-2">
+                <div class="flex justify-between">
+                <p class="text-sm">Tarefas: </p>
+                <p class="text-sm font-semibold">${projeto.tarefas ? projeto.tarefas.length : 0}</p>
+                </div>
+                <div class="flex justify-between">
+                <p class="text-sm">Funcionários: </p>
+                <p class="text-sm font-semibold">${projeto.funcionarios || 0}</p>
+                </div>
+                <div class="flex justify-between">
+                <p class="text-sm">Data final: </p>
+                <p class="text-sm font-semibold">${formatarDataDM(projeto.dataFinal)}</p>
+                </div>
+                <div class="flex justify-between">
+                <p class="text-sm">Dificuldade: </p>
+                <p class="text-sm font-semibold">${projeto.dificuldade || 'N/A'}</p>
+                </div>
             </div>
-            <div class="flex justify-between">
-              <p class="text-sm">Data final: </p>
-              <p class="text-sm font-semibold">${formatarDataDM(projeto.dataFinal)}</p>
-            </div>
-            <div class="flex justify-between">
-              <p class="text-sm">Dificuldade: </p>
-              <p class="text-sm font-semibold">${projeto.dificuldade || 'N/A'}</p>
-            </div>
-          </div>
+          </a>
         `;
   
         projetosContainer.appendChild(projetoCard);

@@ -25,6 +25,11 @@ if (userFoto) {
     userFoto.src = dadosUsuario.foto || '';
     inputSenha.value = dadosUsuario.senha || '';
 }
+const btnLogout = document.querySelector("#btn-logout")
+
+btnLogout.addEventListener("click", ()=>{
+    window.location.href = "/src/login.html";
+})
 
 alterarFoto.addEventListener("click", () => {
     const createDiv = document.querySelector("#modal");

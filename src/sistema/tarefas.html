@@ -60,29 +60,19 @@
         <h1 class="text-4xl font-semibold">Tarefas</h1>
         <div class="flex gap-12">
             <div class="w-4/5 grid grid-cols-3 gap-8">
-                <button class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
+                <button id="btn-adicionar" class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
                     <img class="size-7 absolute transform -translate-y-1/2 top-1/2" src="/public/imagens/icons-white/plus.png" alt="">
                     Adicionar Tarefas
-                </button>
-                
-                <button class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
-                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2" src="/public/imagens/icons-white/edit.png" alt="">
-                    Editar Tarefas
-                </button>
-                
-                <button class="bg-[#70BDB6] text-white w-full p-4 rounded-lg relative font-medium">
-                    <img class="size-7 absolute transform -translate-y-1/2 top-1/2" src="/public/imagens/icons-white/filtro.png" alt="">
-                    Filtrar Tarefas
                 </button>
             </div>
         </div>
         <div class="w-4/5">
             <div class="relative">
-                <span id="projeto-voltar" class="absolute cursor-pointer left-5 text-sm transform -translate-y-1/2 top-1/2">Voltar</span>
+                <span id="projeto-voltar" class="absolute text-white cursor-pointer left-5 text-sm transform -translate-y-1/2 top-1/2">Voltar</span>
 
                 <h1 id="projeto-name" class="bg-[#2AA093] text-white text-center text-2xl p-4 rounded-t-2xl "> 
                 </h1>
-                <span id="projeto-date" class="absolute right-5 text-sm transform -translate-y-1/2 top-1/2"></span>
+                <span id="projeto-date" class="absolute text-white right-5 text-sm transform -translate-y-1/2 top-1/2"></span>
             </div>
             
 
@@ -103,11 +93,44 @@
                 </tr>
             </table>
         </div>
-            
-            
         </div>
-
     </div>
-    
+    <!-- Modal Adicionar Tarefa -->
+    <div id="modal-adicionar" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="relative bg-white dark:bg-[#333] p-6 rounded-lg shadow-lg w-96">
+            <button id="close-adicionar" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xl font-bold">&times;</button>
+            <h2 class="text-xl font-semibold mb-4">Adicionar Tarefa</h2>
+            <input type="text" id="input-adicionar-texto" placeholder="Descrição da tarefa" class="w-full p-2 border rounded mb-4 dark:bg-gray-700 dark:text-white">
+            <select id="input-adicionar-step" class="w-full p-2 border rounded mb-4 dark:bg-gray-700 dark:text-white">
+                <option value="1">Iniciado</option>
+                <option value="2">Estruturado</option>
+                <option value="3">Desenvolvido</option>
+                <option value="4">Verificado</option>
+                <option value="5">Concluído</option>
+            </select>
+            <div class="flex justify-end">
+                <button id="btn-adicionar-confirmar" class="px-4 py-2 bg-[#70BDB6] text-white rounded hover:bg-[#5fa79f]">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Editar Tarefa -->
+    <div id="modal-editar" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="relative bg-white dark:bg-[#333] p-6 rounded-lg shadow-lg w-96">
+            <button id="close-editar" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xl font-bold">&times;</button>
+            <h2 class="text-xl font-semibold mb-4">Editar Tarefa</h2>
+            <input type="text" id="input-editar-texto" placeholder="Descrição da tarefa" class="w-full p-2 border rounded mb-4 dark:bg-gray-700 dark:text-white">
+            <select id="input-editar-step" class="w-full p-2 border rounded mb-4 dark:bg-gray-700 dark:text-white">
+                <option value="1">Iniciado</option>
+                <option value="2">Estruturado</option>
+                <option value="3">Desenvolvido</option>
+                <option value="4">Verificado</option>
+                <option value="5">Concluído</option>
+            </select>
+            <div class="flex justify-end">
+                <button id="btn-editar-confirmar" class="px-4 py-2 bg-[#70BDB6] text-white rounded hover:bg-[#5fa79f]">Salvar</button>
+            </div>
+        </div>
+    </div>    
 </body>
 </html>

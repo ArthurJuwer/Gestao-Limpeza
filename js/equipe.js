@@ -1,5 +1,11 @@
 let dadosUsuario = JSON.parse(localStorage.getItem('usuario'));
 
+const btnLogout = document.querySelector("#btn-logout")
+
+btnLogout.addEventListener("click", ()=>{
+    window.location.href = "/src/login.html";
+})
+
 if (dadosUsuario.equipeatual) {
     const equipeAtual = dadosUsuario.equipes.find(equipe => equipe.nome === dadosUsuario.equipeatual);
 

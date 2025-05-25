@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.classList.add('dark');
     }
 
+    const btnLogout = document.querySelector("#btn-logout")
+
+    btnLogout.addEventListener("click", ()=>{
+        window.location.href = "/src/login.html";
+    })
+
     const menuName = document.querySelector("#menu-name");
     const menuFoto = document.querySelector("#menu-foto");
 
